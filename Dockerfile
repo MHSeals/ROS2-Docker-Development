@@ -11,6 +11,8 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.original && \
 # install basic dependnecies
 RUN apt-get update && \
     apt-get -y --no-install-recommends install \
+    mesa-utils \
+    mesa-utils-extra \
     wget
 
 # install velodyne dependencies
