@@ -1,0 +1,10 @@
+FROM mhseals/roboboat-2023:base
+
+# for glxinfo
+RUN apt-get -y update && \
+    apt-get -y install mesa-utils
+
+# enable nvidia graphics passthrough
+ENV QT_X11_NO_MITSHM 1
+ENV TERM xterm-256color
+ENV LD_LIBRARY_PATH=/usr/lib/wsl/lib
