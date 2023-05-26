@@ -1,4 +1,4 @@
-FROM osrf/ros:humble-desktop 
+FROM osrf/ros:humble-desktop-full-jammy
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -14,7 +14,11 @@ RUN apt-get update && \
     mesa-utils \
     mesa-utils-extra \
     python3-pip \
+    python-is-python3 \
     wget
+
+# downgrade setuptools to get rid of deprecated message and install python dependencies
+RUN pip install setuptools==58.2.0 torch torchvision ultralytics
 
 # install velodyne dependencies
 RUN apt-get update && \
