@@ -29,5 +29,4 @@ RUN mkdir -p /root/colcon_workspace && \
     echo "cd /root/colcon_workspace" >> /root/.bashrc
 
 # source ROS setup.bash
-RUN source /opt/ros/humble/setup.bash
-CMD ["bash"]
+RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
