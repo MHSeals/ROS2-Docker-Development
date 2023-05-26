@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-WORKSPACE_DIR=$(cd -- "$(dirname -- "${SCRIPT_DIR}")" &>/dev/null && pwd)
+WORKSPACE_DIR=pwd
 
-CONTAINER_NAME=ros2-workspace
-IMAGE_NAME=samminhch/ros2-devel
+CONTAINER_NAME=roboboat-2023
+IMAGE_NAME=mhseals/roboboat-2023
 IMAGE_TAG=nvidia
 
 # get docker container ID if exists

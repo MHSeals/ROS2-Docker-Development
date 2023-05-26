@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-WORKSPACE_DIR=$(cd -- "$(dirname -- "${SCRIPT_DIR}")" &>/dev/null && pwd)
+WORKSPACE_DIR=$PWD
 
-CONTAINER_NAME=ros2-workspace
-IMAGE_NAME=samminhch/ros2-devel
+CONTAINER_NAME=roboboat-2023
+IMAGE_NAME=mhseals/roboboat-2023
 IMAGE_TAG=nvidia
 
 # get docker container ID if exists
@@ -16,9 +15,11 @@ if [ -z "${CONTAINER_ID}" ]; then
         --rm \
         --tty \
         --privileged \
+        --name ${CONTAINER_NAME} \
         --volume /tmp/.X11-unix:/tmp/.X11-unix \
         --volume /mnt/wslg:/mnt/wslg \
         --volume /usr/lib/wsl:/usr/lib/wsl \
+        --volume "${WORKSPACE_DIR}:/root/colcon_workspace/" \
         --device=/dev/dxg \
         --env DISPLAY=$DISPLAY \
         --env WAYLAND_DISPLAY=$WAYLAND_DISPLAY \

@@ -30,3 +30,4 @@ RUN mkdir -p /root/colcon_workspace && \
 
 # source ROS setup.bash
 RUN source /opt/ros/humble/setup.bash
+CMD ["bash"]
