@@ -13,6 +13,7 @@ RUN apt-get update && \
     apt-get -y --no-install-recommends install \
     mesa-utils \
     mesa-utils-extra \
+    python3-pip \
     wget
 
 # install velodyne dependencies
