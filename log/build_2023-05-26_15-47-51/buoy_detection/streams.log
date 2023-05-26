@@ -1,0 +1,22 @@
+[0.603s] Invoking command in '/root/colcon_workspace/src/buoy_detection': PYTHONPATH=/root/colcon_workspace/build/buoy_detection/prefix_override:/root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/buoy_detection build --build-base /root/colcon_workspace/build/buoy_detection/build install --record /root/colcon_workspace/build/buoy_detection/install.log --single-version-externally-managed
+[0.820s] running egg_info
+[0.821s] writing ../../build/buoy_detection/buoy_detection.egg-info/PKG-INFO
+[0.822s] writing dependency_links to ../../build/buoy_detection/buoy_detection.egg-info/dependency_links.txt
+[0.822s] writing entry points to ../../build/buoy_detection/buoy_detection.egg-info/entry_points.txt
+[0.823s] writing requirements to ../../build/buoy_detection/buoy_detection.egg-info/requires.txt
+[0.823s] writing top-level names to ../../build/buoy_detection/buoy_detection.egg-info/top_level.txt
+[0.823s] reading manifest file '../../build/buoy_detection/buoy_detection.egg-info/SOURCES.txt'
+[0.826s] writing manifest file '../../build/buoy_detection/buoy_detection.egg-info/SOURCES.txt'
+[0.827s] running build
+[0.827s] running build_py
+[0.827s] running install
+[0.827s] running install_lib
+[0.828s] running install_data
+[0.828s] copying package.xml -> /root/colcon_workspace/install/buoy_detection/share/buoy_detection
+[0.829s] running install_egg_info
+[0.831s] removing '/root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages/buoy_detection-0.0.0-py3.10.egg-info' (and everything under it)
+[0.831s] Copying ../../build/buoy_detection/buoy_detection.egg-info to /root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages/buoy_detection-0.0.0-py3.10.egg-info
+[0.831s] running install_scripts
+[0.852s] Installing ai script to /root/colcon_workspace/install/buoy_detection/lib/buoy_detection
+[0.852s] writing list of installed files to '/root/colcon_workspace/build/buoy_detection/install.log'
+[0.875s] Invoked command in '/root/colcon_workspace/src/buoy_detection' returned '0': PYTHONPATH=/root/colcon_workspace/build/buoy_detection/prefix_override:/root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/buoy_detection build --build-base /root/colcon_workspace/build/buoy_detection/build install --record /root/colcon_workspace/build/buoy_detection/install.log --single-version-externally-managed

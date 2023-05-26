@@ -1,0 +1,23 @@
+[0.614s] Invoking command in '/root/colcon_workspace/src/buoy_detection': PYTHONPATH=/root/colcon_workspace/build/buoy_detection/prefix_override:/root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/buoy_detection build --build-base /root/colcon_workspace/build/buoy_detection/build install --record /root/colcon_workspace/build/buoy_detection/install.log --single-version-externally-managed
+[0.783s] running egg_info
+[0.783s] writing ../../build/buoy_detection/buoy_detection.egg-info/PKG-INFO
+[0.783s] writing dependency_links to ../../build/buoy_detection/buoy_detection.egg-info/dependency_links.txt
+[0.783s] writing entry points to ../../build/buoy_detection/buoy_detection.egg-info/entry_points.txt
+[0.783s] writing requirements to ../../build/buoy_detection/buoy_detection.egg-info/requires.txt
+[0.783s] writing top-level names to ../../build/buoy_detection/buoy_detection.egg-info/top_level.txt
+[0.785s] reading manifest file '../../build/buoy_detection/buoy_detection.egg-info/SOURCES.txt'
+[0.786s] writing manifest file '../../build/buoy_detection/buoy_detection.egg-info/SOURCES.txt'
+[0.786s] running build
+[0.786s] running build_py
+[0.786s] running install
+[0.786s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.786s]   warnings.warn(
+[0.786s] running install_lib
+[0.788s] running install_data
+[0.788s] running install_egg_info
+[0.790s] removing '/root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages/buoy_detection-0.0.0-py3.10.egg-info' (and everything under it)
+[0.790s] Copying ../../build/buoy_detection/buoy_detection.egg-info to /root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages/buoy_detection-0.0.0-py3.10.egg-info
+[0.790s] running install_scripts
+[0.808s] Installing ai script to /root/colcon_workspace/install/buoy_detection/lib/buoy_detection
+[0.808s] writing list of installed files to '/root/colcon_workspace/build/buoy_detection/install.log'
+[0.828s] Invoked command in '/root/colcon_workspace/src/buoy_detection' returned '0': PYTHONPATH=/root/colcon_workspace/build/buoy_detection/prefix_override:/root/colcon_workspace/install/buoy_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/buoy_detection build --build-base /root/colcon_workspace/build/buoy_detection/build install --record /root/colcon_workspace/build/buoy_detection/install.log --single-version-externally-managed
