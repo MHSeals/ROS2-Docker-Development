@@ -8,11 +8,9 @@
   <license>MIT</license>
 
   <exec_depend>numpy</exec_depend>
-  <exec_depend>torch</exec_depend>
   <exec_depend>cv_brdige</exec_depend>
   <exec_depend>ultralytics</exec_depend>
   <exec_depend>cv2</exec_depend>
-  <exec_depend>torchvision</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>traceback</exec_depend>
   <exec_depend>rclpy</exec_depend>

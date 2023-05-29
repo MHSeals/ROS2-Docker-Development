@@ -8,9 +8,6 @@ from sensor_msgs.msg import Image
 import numpy as np
 from cv_bridge import CvBridge
 
-import torch
-from torchvision.transforms import functional as F
-
 from ultralytics import YOLO
 
 class BuoyDetectionPublisher(Node):
