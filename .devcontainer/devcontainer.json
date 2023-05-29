@@ -24,6 +24,6 @@
 		"source=.,target=/root/colcon_workspace,type=bind"
 	],
 	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/git:1": {}
 	}
 }
