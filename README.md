@@ -18,7 +18,7 @@ After cloning this repository, you can run `sudo docker-compose up` to start up 
 
 ## Running a ROS2 package
 
-In the container, run `colcon build` to build all the packages. Once that's finished, you can source the generated setup file: `source install/setup.bash`, and then run the package (ex: `ros2 run buoy_detection ai`).
+In the container, run `colcon build` to build all the packages. Once that's finished, you can source the generated setup file (ex: `source install/setup.bash`), and then run the package (ex: `ros2 run buoy_detection ai`).
 
 - To view running nodes and topics, run `rqt_graph`.
 
