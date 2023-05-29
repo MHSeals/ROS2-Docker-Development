@@ -56,7 +56,7 @@ class BuoyDetectionPublisher(Node):
 def main(args=None):
     print('Hi from buoy_detection.')
     
-    rclpy.init(args)
+    rclpy.init(args=args)
     
     buoy_detection_publisher = BuoyDetectionPublisher()
     
