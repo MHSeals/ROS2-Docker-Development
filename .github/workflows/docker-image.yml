@@ -1,0 +1,33 @@
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Dockerfile'
+      - 'Dockerfile.nvidia'
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          
+      - name: Build and push base Docker image
+        run: |
+          docker build -t mhseals/roboboat-2023:base -f Dockerfile .
+          docker push mhseals/roboboat-2023:base
+
+      - name: Build and push NVIDIA Docker image
+        run: |
+          docker build -t mhseals/roboboat-2023:nvidia -f Dockerfile.nvidia .
+          docker push mhseals/roboboat-2023:nvidia
