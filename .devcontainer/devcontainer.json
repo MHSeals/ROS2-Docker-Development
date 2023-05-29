@@ -8,8 +8,9 @@
 			"extensions": [
 				"ms-python.python",
 				"ms-python.vscode-pylance",
-				"streetsidesoftware.code-spell-checker",
-				"njpwerner.autodocstring"
+				"njpwerner.autodocstring",
+				"ms-azuretools.vscode-docker",
+				"streetsidesoftware.code-spell-checker"
 			]
 		},
 		"settings": {
@@ -21,5 +22,8 @@
 		"source=/mnt/wslg,target=/mnt/wslg,type=bind",
 		"source=/usr/lib/wsl,target=/usr/lib/wsl,type=bind",
 		"source=.,target=/root/colcon_workspace,type=bind"
-	]
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+	}
 }
