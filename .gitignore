@@ -1,7 +1,7 @@
 devel/
 log/
 build/
-bin/
+install/
 lib/
 msg_gen/
 srv_gen/
