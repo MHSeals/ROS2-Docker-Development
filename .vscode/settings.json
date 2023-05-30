@@ -1,5 +1,13 @@
 {
     "cSpell.words": [
-        "colcon"
+        "autodocstring",
+        "azuretools",
+        "colcon",
+        "cuda",
+        "devcontainer",
+        "devcontainers",
+        "njpwerner",
+        "pylance",
+        "wslg"
     ]
 }
