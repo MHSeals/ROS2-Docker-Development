@@ -1,9 +1,17 @@
 {
     "cSpell.words": [
+        "autodocstring",
+        "azuretools",
         "colcon",
         "imgmsg",
         "rclpy",
         "ultralytics",
-        "Zutki"
+        "Zutki",
+        "cuda",
+        "devcontainer",
+        "devcontainers",
+        "njpwerner",
+        "pylance",
+        "wslg"
     ]
 }
