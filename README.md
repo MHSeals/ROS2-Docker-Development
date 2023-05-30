@@ -12,6 +12,10 @@ After cloning the repository, open up the project. VSCode will prompt you to reo
 
 Follow this [link](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials) for learning how to pass your git credentials to the container.
 
+### For NVIDIA Developers
+
+You can pass your NVIDIA GPUs by changing `.devcontainer/devcontainer.json`'s 3rd line to use `../docker-compose.nvidia.yml` file instead of `../docker-compose.yml`.
+
 ### For NeoVim Developers
 
 After cloning this repository, you can run `sudo docker-compose up` to start up the coding environment. From there, you can `docker exec -it ros2-docker-development /bin/bash` to access the container.
