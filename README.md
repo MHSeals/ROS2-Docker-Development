@@ -10,11 +10,16 @@
 
 After cloning the repository, open up the project. VSCode will prompt you to reopen in a container. Hit yes, and then the coding environment for this repository will spin up. Once that finishes, you can start developing for this repository!
 
-Follow this [link](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials) for learning how to pass your git credentials to the container.
+Follow this [link](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials) to learn how to pass your git credentials to the container. You can also refer to this [Stack Overflow Post](https://stackoverflow.com/questions/74704065/how-to-pass-git-ssh-credentials-from-wsl-to-vscode-dev-container) for reference.
 
 ### For NVIDIA Developers
 
-You can pass your NVIDIA GPUs by changing `.devcontainer/devcontainer.json`'s 3rd line to use `../docker-compose.nvidia.yml` file instead of `../docker-compose.yml`.
+You can pass your NVIDIA GPUs by changing `.devcontainer/devcontainer.json`'s 3rd line:
+
+```diff
+- 	"dockerComposeFile": "../docker-compose.yml",
++   "dockerComposeFIle": "../docker-compose.nvidia.yml",
+```
 
 ### For NeoVim Developers
 
