@@ -2,22 +2,11 @@ version: "3"
 
 services:
   dev-workspace:
+    extends:
+      file: docker-compose.yml
+      service: dev-workspace
     image: mhseals/roboboat-2023:nvidia
-    volumes:
-      - /tmp/.X11-unix/:/tmp/.X11-unix/
-      - /mnt/wslg:/mnt/wslg
-      - /usr/lib/wsl:/usr/lib/wsl
-      - .:/root/colcon_workspace
     environment:
-      - DISPLAY
-      - WAYLAND_DISPLAY
-      - XDG_RUNTIME_DIR
-      - PULSE_SERVER
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
-              count: all
+      - NVIDIA_VISIBLE_DEVICES=all
     restart: always
     command: tail -f /dev/null
