@@ -10,3 +10,4 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
     restart: always
     command: tail -f /dev/null
+    runtime: nvidia
