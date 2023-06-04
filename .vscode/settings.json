@@ -9,5 +9,17 @@
         "njpwerner",
         "pylance",
         "wslg"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/home/fusha153/Documents/ROS2-Docker-Development/install/velodyne_lidar/lib/python3.10/site-packages",
+        "/home/fusha153/Documents/ROS2-Docker-Development/install/buoy_detection/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/fusha153/Documents/ROS2-Docker-Development/install/velodyne_lidar/lib/python3.10/site-packages",
+        "/home/fusha153/Documents/ROS2-Docker-Development/install/buoy_detection/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ]
 }
