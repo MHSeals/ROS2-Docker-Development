@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'ai = buoy_detection.ai:main'
+            'ai = buoy_detection.processed:main'
         ],
     },
 )
