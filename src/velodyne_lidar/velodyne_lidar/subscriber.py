@@ -11,7 +11,7 @@ class mynode(Node):
         super().__init__('subscriber')
         self.pose_subscriber_ = self.create_subscription(
                 PointCloud2,
-                'velodyne_points',
+                "/velodyne_points",
                 self.callback,
                 10)
     def callback(self, msg: PointCloud2):
