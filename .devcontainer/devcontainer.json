@@ -1,6 +1,6 @@
 {
 	"name": "ROS2-Developer-Workspace",
-	"dockerComposeFile": "../docker-compose.yml",
+	"dockerComposeFile": "../docker-compose.nvidia.yml",
 	"service": "dev-workspace",
 	"workspaceFolder": "/root/colcon_workspace",
 	"customizations": {
@@ -16,15 +16,11 @@
 			]
 		},
 		"settings": {
-			"terminal.integrated.shell.linux": "/bin/bash"
+			"terminal.integrated.shell.linux": "/bin/bash",
+			"docker-compose.x11Service": "dev-workspace",
+			"docker.x11Forwarding": true
 		}
 	},
-	"mounts": [
-		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
-		"source=/mnt/wslg,target=/mnt/wslg,type=bind",
-		"source=/usr/lib/wsl,target=/usr/lib/wsl,type=bind",
-		"source=.,target=/root/colcon_workspace,type=bind"
-	],
 	"features": {
 		"ghcr.io/devcontainers/features/git:1": {}
 	}
