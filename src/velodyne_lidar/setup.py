@@ -16,7 +16,7 @@ setup(
     maintainer='fusha153',
     maintainer_email='pipandw@gmail.com',
     description='ROS2 package that subscribes to the Velodynes PointCloud topic.',
-    license='TODO: License declaration',
+    license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
