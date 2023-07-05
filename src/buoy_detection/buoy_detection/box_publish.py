@@ -20,7 +20,7 @@ class BuoyBoxDetectionPublisher(Node):
         # publish to processed node
         self.publisher_ = self.create_publisher(
             msg_type=AIRes, 
-            topic='processed', 
+            topic='/ai/results', 
             qos_profile=10
         )
 
@@ -35,13 +35,13 @@ class BuoyBoxDetectionPublisher(Node):
         conf_param_desc = ParameterDescriptor(
             description='Sets the minimum threshold for confidence in predictions')
 
-        self.declare_parameter('conf_thresh', 85, conf_param_desc)
+        self.declare_parameter('conf_thresh', 0.85, conf_param_desc)
         
         
     def image_callback(self, msg):
-        print("test")
+        conf_thresh = self.get_parameter('conf_thresh').value
 
-        msg = AIRes()
+        """msg = AIRes()
         msg.name = "TEST"
         msg.index = 0
         msg.x = 0
@@ -49,9 +49,7 @@ class BuoyBoxDetectionPublisher(Node):
         msg.w = 0
         msg.h = 0
 
-        self.publisher_.publish(msg)
-
-        return
+        self.publisher_.publish(msg)"""
 
         try:
             # Convert the ROS image message to OpenCV format
@@ -59,17 +57,34 @@ class BuoyBoxDetectionPublisher(Node):
             np_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
 
             # Pass the image through the model for inference
-            result = self._model(np_image)
+            results = self._model(np_image)
 
-            # Get the visualized image with bounding boxes and labels
-            #visualized_image = result[0].plot()
+            #results = results.filter(conf=conf_thresh)
 
-            # Convert the visualized image to OpenCV format
-            #cv_image = cv2.cvtColor(np.array(visualized_image), cv2.COLOR_RGB2BGR)
+            for pred in results:
+                names = pred.names
 
-            # Convert the OpenCV image to ROS Image message
-            #modified_msg = bridge.cv2_to_imgmsg(cv_image, encoding='bgr8')
-            self.publisher_.publish(modified_msg)
+                for i in range(len(pred.boxes)):
+                    name = names.get(int(pred.boxes.cls[i]))
+                    confidence = pred.boxes.conf[i]
+                    bounding_box = pred.boxes[i].xywh[0]
+
+                    #print(f"{name} {int(confidence*100)}% {bounding_box}")
+                    
+                    print(type(bounding_box[0].item()));
+
+                    msg = AIRes()
+                    msg.name = name
+                    msg.index = i
+                    msg.x = int(round(bounding_box[0].item()))
+                    msg.y = int(round(bounding_box[1].item()))
+                    msg.w = int(round(bounding_box[2].item()))
+                    msg.h = int(round(bounding_box[3].item()))
+
+                    print(msg)
+
+                    self.publisher_.publish(msg)
+
         except Exception as e:
             self.get_logger.error(f'Error: {e}')
             self.get_logger.debug(f'Error traceback: {traceback.format_exc}')

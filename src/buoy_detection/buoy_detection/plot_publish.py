@@ -18,7 +18,7 @@ class BuoyDetectionPublisher(Node):
         # publish to processed node
         self.publisher_ = self.create_publisher(
             msg_type=Image, 
-            topic='processed', 
+            topic='/processed', 
             qos_profile=10
         )
 
