@@ -41,16 +41,6 @@ class BuoyBoxDetectionPublisher(Node):
     def image_callback(self, msg):
         conf_thresh = self.get_parameter('conf_thresh').value
 
-        """msg = AIRes()
-        msg.name = "TEST"
-        msg.index = 0
-        msg.x = 0
-        msg.y = 0
-        msg.w = 0
-        msg.h = 0
-
-        self.publisher_.publish(msg)"""
-
         try:
             # Convert the ROS image message to OpenCV format
             bridge = CvBridge()
@@ -69,10 +59,11 @@ class BuoyBoxDetectionPublisher(Node):
                     confidence = pred.boxes.conf[i]
                     bounding_box = pred.boxes[i].xywh[0]
 
+                    if confidence < conf_thresh:
+                        pass
+
                     #print(f"{name} {int(confidence*100)}% {bounding_box}")
                     
-                    print(type(bounding_box[0].item()));
-
                     msg = AIRes()
                     msg.name = name
                     msg.index = i
