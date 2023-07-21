@@ -8,6 +8,6 @@ services:
     image: mhseals/roboboat-2023:nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-    restart: always
+    restart: unless-stopped
     command: tail -f /dev/null
     runtime: nvidia
