@@ -7,7 +7,11 @@
 - [ ] [Docker](https://github.com/MHSeals/Docker-Tutorial)
 
 ## Running the Development Environment
-
+Run 
+```bash
+xhost +
+```
+to ensure this works.
 After cloning the repository, open up the project. VSCode will prompt you to reopen in a container. Hit yes, and then the coding environment for this repository will spin up. Once that finishes, you can start developing for this repository!
 
 Follow this [link](https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials) to learn how to pass your git credentials to the container. You can also refer to this [Stack Overflow Post](https://stackoverflow.com/questions/74704065/how-to-pass-git-ssh-credentials-from-wsl-to-vscode-dev-container) for reference.
@@ -21,9 +25,12 @@ You can pass your NVIDIA GPUs by changing `.devcontainer/devcontainer.json`'s 3r
 +   "dockerComposeFIle": "../docker-compose.nvidia.yml",
 ```
 
-### For NeoVim Developers
+### For Non-VSCode Users
 
-After cloning this repository, you can run `sudo docker-compose up` to start up the coding environment. From there, you can `docker exec -it <container name> /bin/bash` (you can use `docker ps` to view active containers) to access the container.
+After cloning this repository, you can run `docker-compose up -d` to start up the coding environment. From there, you can `docker exec -it <container name> /bin/bash` (you can use `docker ps` to view active containers) to access the container.
+
+### For Nvidia Non-VSCode Users
+Instead of running `docker-compose up -d`, run `docker-compose -f docker-compose.nvidia.yml up -d`
 
 ### RealSense
 
