@@ -25,7 +25,7 @@ You can pass your NVIDIA GPUs by changing `.devcontainer/devcontainer.json`'s 3r
 +   "dockerComposeFIle": "../docker-compose.nvidia.yml",
 ```
 
-### For Non-VSCode Users
+### For Non-VSCode Non-NVidia Users
 
 After cloning this repository, you can run `docker-compose up -d` to start up the coding environment. From there, you can `docker exec -it <container name> /bin/bash` (you can use `docker ps` to view active containers) to access the container.
 
